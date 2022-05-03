@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 for d in range(97, 123):
     if (d != 101 and d != 113):
-        print(chr(k), end='')
+        print(chr(d), end='')
