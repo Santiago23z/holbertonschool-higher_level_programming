@@ -1,4 +1,4 @@
 #!/usr/bin/env python3
 def no_c(my_string):
-    new_str = ''.join(x for x in my_string if x != "c" and x != "C")
+    new_str = ''.join(a for a in my_string if a != "c" and a != "C")
     return(new_str)
