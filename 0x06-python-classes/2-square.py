@@ -1,6 +1,10 @@
 #!/usr/bin/python3
-class Square:
+"""defines square"""
 
+
+class Square:
+    """new object"""
+    
     def __init__(self, size=0):
 
         if type(size) is not int:
