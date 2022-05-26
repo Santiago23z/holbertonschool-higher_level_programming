@@ -6,7 +6,7 @@ class Square:
     """a simple class"""
 
     def __init__(self, size=0):
-        """inicialization safe of an square"""
+        """inicializaion safe of an square"""
         if type(size) == int:
             if size >= 0:
                 self.__size = size
@@ -18,3 +18,5 @@ class Square:
     def area(self):
         """int: return the area of rhe squuare"""
         return (self.__size ** 2)
+
+    for i in range()
