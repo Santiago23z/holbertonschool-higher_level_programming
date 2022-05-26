@@ -19,4 +19,4 @@ class Square:
         """int: return the area of rhe squuare"""
         return (self.__size ** 2)
 
-    for i in range()
+    
