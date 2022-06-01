@@ -4,6 +4,9 @@
 '''
 
 
+from turtle import width
+
+
 class Rectangle():
 
     number_of_instances = 0
@@ -86,3 +89,10 @@ class Rectangle():
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    def square(cls, size=0):
+        '''Returns a square of the size
+        '''
+        height = size
+        width = size
+        return cls(height, width)
