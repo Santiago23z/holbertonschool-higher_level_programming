@@ -1,17 +1,14 @@
 #!/usr/bin/python3
-"""
-A rectangle with width and height.
-"""
+"""A rectangle with width and height."""
 
 
-class Rectangle():
+class Rectangle:
     """
     Rectangle functions and data
     """
 
     def __init__(self, width=0, height=0):
-        """ Instantions
-        """
+        """ Instantions"""
         self.width = width
         self.height = height
     
@@ -26,7 +23,7 @@ class Rectangle():
     def width(self, value):
         """ setter for width
         """
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
