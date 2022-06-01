@@ -1,51 +1,71 @@
 #!/usr/bin/python3
-
-'''the class is defined here
-'''
-
-
-from turtle import width
+"""
+A rectangle with width and height.
+"""
 
 
-class Rectangle():
+class Rectangle:
+    """
+    Rectangle functions and data
+    """
 
+    # Public
     number_of_instances = 0
-    print_symbol = '#'
-    
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
-        ''' instantiation
-        '''
+        """ Instantiation
+        """
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-    
+
     @property
     def width(self):
+        """ Getter for width
+        """
         return self.__width
-    
+
     @width.setter
     def width(self, value):
-        if type(value) is not int:
+        """ Setter for width
+        """
+        if type(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
-            raise TypeError("width must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
+        """ Getter for height
+        """
         return self.__height
-    
+
     @height.setter
     def height(self, value):
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
+        """ Setter for height
+        """
+        if type(value) != int:
+            raise TypeError("width must be an integer")
         if value < 0:
-            raise TypeError("height must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
+    # Functions
     def area(self):
-        return self.__width * self.__height 
-    
+        """ Returns area of rectangle
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """ Returns perimeter of rectangle
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else:
+            return 2 * (self.__width + self.__height)
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """ Returns whichever is bigger, rect_1 or rect_2
@@ -62,22 +82,19 @@ class Rectangle():
 
     @classmethod
     def square(cls, size=0):
-        '''Returns a square of the size
-        '''
+        """ Returns a square of the size
+        """
         height = size
         width = size
         return cls(height, width)
 
-    def perimeter(self):
-        if self.__width == 0 or self.__height == 0:
-            return 0
-        return (self.__width * 2) + (self.__height * 2)
-
     def __str__(self):
+        """ print() __str__ method funtion to return rectangle in char '#'
+        """
         res = ""
         if self.__width == 0 or self.__height == 0:
             return res
-        
+
         for i in range(self.__height):
             for i2 in range(self.__width):
                 res += str(self.print_symbol)
@@ -86,6 +103,9 @@ class Rectangle():
         return res
 
     def __repr__(self):
+        """ print() or eval() __repr__ method function to return
+            ... Rectangle(width, height)
+        """
         w = str(self.__width)
         h = str(self.__height)
 
@@ -93,7 +113,8 @@ class Rectangle():
         return res
 
     def __del__(self):
-        """ print a message for del
+        """ Print a message for del
+            Decrement instance when del is called
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
