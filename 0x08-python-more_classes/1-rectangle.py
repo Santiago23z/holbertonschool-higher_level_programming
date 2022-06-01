@@ -3,9 +3,7 @@
 
 
 class Rectangle:
-    """
-    Rectangle functions and data
-    """
+    """Rectangle functions and data"""
 
     def __init__(self, width=0, height=0):
         """ Instantions"""
@@ -21,8 +19,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """ setter for width
-        """
+        
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -31,15 +28,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """
-        Getter for height """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ setter for height
-        """
-        if type(value) != int:
+
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
