@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import json
 """
-contains Object to a text file, using a JSON 
+contains Object to a text file, using a JSON
 """
 
 
