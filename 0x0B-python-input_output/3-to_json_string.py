@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 from json import dumps
-import json
 """
 contains json functions import
 """
