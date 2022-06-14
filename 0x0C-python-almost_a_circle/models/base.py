@@ -9,7 +9,6 @@ from logging import exception
 import os
 
 
-
 class Base:
     """
     ...
