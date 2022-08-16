@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // JS Script
-module.exports = class Square extends require('./5-square') {
+module.exports = class Square extends require('./4-rectangle') {
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
